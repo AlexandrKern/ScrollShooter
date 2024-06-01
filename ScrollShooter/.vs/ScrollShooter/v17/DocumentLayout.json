@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "D:\\ScrollShooter\\ScrollShooter\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\deletedbulit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\deletedbulit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|D:\\ScrollShooter\\ScrollShooter\\assets\\scripts\\crosshaircontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crosshaircontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,12 +27,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DeletedBulit.cs",
+              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\DeletedBulit.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DeletedBulit.cs",
+              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\DeletedBulit.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DeletedBulit.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T15:42:13.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CrosshairController.cs",
+              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\CrosshairController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CrosshairController.cs",
+              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\CrosshairController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CrosshairController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T15:24:46.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
               "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAQwGsAAABSAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAiwG8AAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-31T13:56:14.371Z",
               "EditorCaption": ""

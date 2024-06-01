@@ -50,14 +50,18 @@ public class PlayerController : MonoBehaviour
             // Перемещение персонажа
             rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
-            // Поворот спрайта персонажа в сторону движения
-            if (moveInput > 0)
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            if (mousePosition.x > transform.position.x|| moveInput > 0)
             {
                 sr.flipX = false;
+                firePoint.localPosition = new Vector3(Mathf.Abs(firePoint.localPosition.x), firePoint.localPosition.y, firePoint.localPosition.z);
+                firePoint.localRotation = Quaternion.Euler(0, 0, 0);
             }
-            else if (moveInput < 0)
+            else if(!(mousePosition.x > transform.position.x) || moveInput < 0)
             {
                 sr.flipX = true;
+                firePoint.localPosition = new Vector3(-Mathf.Abs(firePoint.localPosition.x), firePoint.localPosition.y, firePoint.localPosition.z);
+                firePoint.localRotation = Quaternion.Euler(0, 180, 0);
             }
 
             // Прыжок
@@ -66,7 +70,7 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
             // Начало кувырка
-            if (isGrounded && Input.GetKeyDown(KeyCode.LeftShift))
+            if (isGrounded && Input.GetKeyDown(KeyCode.LeftShift)&& moveInput != 0)
             {
                 isRolling = true;
                 rollTime = rollDuration;
@@ -103,9 +107,11 @@ public class PlayerController : MonoBehaviour
         anim.SetTrigger("isShooting");
 
         // Создание пули
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 direction = (mousePosition - firePoint.position).normalized;
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
-        bulletRb.velocity = new Vector2(sr.flipX ? -bulletSpeed : bulletSpeed, 0);
+        bulletRb.velocity = direction * bulletSpeed;
     }
 
     // Отрисовка круга проверки на землю в редакторе
