@@ -1,0 +1,36 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SceneAudioManager : MonoBehaviour
+{
+    public AudioClip backgroundMusic;
+    public AudioClip buttonClickSound;
+    public AudioClip gunshot;
+    public AudioClip explosion;
+    public AudioClip playerDeath;
+    public AudioClip enemyDeath;
+    public AudioClip enemyBulletExplosion;
+    public AudioClip enemyLaserShot;
+
+    void Start()
+    {
+        // Добавление аудиоклипов в менеджеры звуков
+        AudioManager.instance.AddMusicClip("BackgroundMusic", backgroundMusic);
+        AudioManager.instance.AddEffectClip("ButtonClick", buttonClickSound);
+        AudioManager.instance.AddEffectClip("GunShot", gunshot);
+        AudioManager.instance.AddEffectClip("Explosion", explosion);
+        AudioManager.instance.AddEffectClip("PlayerDeath", playerDeath);
+        AudioManager.instance.AddEffectClip("EnemyDeath", enemyDeath);
+        AudioManager.instance.AddEffectClip("EnemyBulletExplosion", enemyBulletExplosion);
+        AudioManager.instance.AddEffectClip("EnemyLaserShot", enemyLaserShot);
+
+        // Воспроизведение фоновой музыки
+        AudioManager.instance.PlayMusic("BackgroundMusic");
+    }
+
+    public void OnButtonClick()
+    {
+        AudioManager.instance.PlayEffect("ButtonClick");
+    }
+}

@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "D:\\ScrollShooter\\ScrollShooter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\deletedbulit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\deletedbulit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|D:\\ScrollShooter\\ScrollShooter\\assets\\scripts\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|D:\\ScrollShooter\\ScrollShooter\\assets\\scripts\\crosshaircontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crosshaircontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\enemy\\enemypatrolandattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemypatrolandattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|D:\\ScrollShooter\\ScrollShooter\\assets\\scripts\\enemy\\enemybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|D:\\ScrollShooter\\ScrollShooter\\assets\\scripts\\enemy\\enemybullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemybullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|D:\\ScrollShooter\\ScrollShooter\\assets\\scripts\\sound\\sceneaudiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\sound\\sceneaudiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|D:\\ScrollShooter\\ScrollShooter\\assets\\scripts\\player\\playerbullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerbullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +43,92 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DeletedBulit.cs",
-              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\DeletedBulit.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\DeletedBulit.cs",
-              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\DeletedBulit.cs",
-              "RelativeToolTip": "Assets\\Scripts\\DeletedBulit.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAArAAAA",
+              "Title": "Health.cs",
+              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Health.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Health.cs",
+              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Health.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Health.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAowDEAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-01T15:42:13.861Z",
+              "WhenOpened": "2024-06-07T14:53:18.574Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CrosshairController.cs",
-              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\CrosshairController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CrosshairController.cs",
-              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\CrosshairController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CrosshairController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
+              "DocumentIndex": 5,
+              "Title": "SceneAudioManager.cs",
+              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Sound\\SceneAudioManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Sound\\SceneAudioManager.cs",
+              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Sound\\SceneAudioManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Sound\\SceneAudioManager.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwBkAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-01T15:24:46.539Z",
+              "WhenOpened": "2024-06-06T15:07:35.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PlayerBullet.cs",
+              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Player\\PlayerBullet.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerBullet.cs",
+              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Player\\PlayerBullet.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerBullet.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T17:02:28.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EnemyBullet.cs",
+              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Enemy\\EnemyBullet.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyBullet.cs",
+              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Enemy\\EnemyBullet.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemyBullet.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowCAAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T15:40:37.077Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "PlayerController.cs",
-              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\PlayerController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
-              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\PlayerController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAiwG8AAAAnAAAA",
+              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Player\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerController.cs",
+              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Player\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerController.cs",
+              "ViewState": "AQIAAI4AAAAAAAAAAAAcwJoAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T13:56:14.371Z",
+              "WhenOpened": "2024-06-05T16:37:22.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EnemyBase.cs",
+              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Enemy\\EnemyBase.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyBase.cs",
+              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Enemy\\EnemyBase.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemyBase.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwAoAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T16:01:20.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EnemyPatrolAndAttack.cs",
+              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Enemy\\EnemyPatrolAndAttack.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyPatrolAndAttack.cs",
+              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Enemy\\EnemyPatrolAndAttack.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemyPatrolAndAttack.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAwwFQAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T15:45:33.22Z",
               "EditorCaption": ""
             }
           ]
