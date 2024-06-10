@@ -35,6 +35,10 @@ public class PlayerController : MonoBehaviour
     public Transform firePoint;
     public float bulletSpeed = 10f;
     public GameObject impactEffectPrefab;// Префаб эффекта столкновения
+    public int maxAmmo = 10;
+    private int currentAmmo;
+    public BulletScale bulletScale;
+
     private Health health;
     void Start()
     {
@@ -43,6 +47,8 @@ public class PlayerController : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         health = GetComponent<Health>();
+        currentAmmo = maxAmmo;
+        bulletScale.SetBullet(1f);
     }
 
     void Update()
@@ -85,12 +91,14 @@ public class PlayerController : MonoBehaviour
                 // Прыжок
                 if (isGrounded && Input.GetKeyDown(KeyCode.Space))
                 {
+                    AudioManager.instance.PlayEffect("PlayerJump");
                     rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 }
 
                 // Начало кувырка
-                if (isGrounded && Input.GetKeyDown(KeyCode.LeftShift))
+                if (isGrounded && Input.GetMouseButtonDown(1))
                 {
+                    AudioManager.instance.PlayEffect("Somersault");
                     isRolling = true;
                     rollTime = rollDuration;
                     anim.SetBool("isRolling", true);
@@ -127,20 +135,31 @@ public class PlayerController : MonoBehaviour
 
     private void Shoot()
     {
-        // Запуск анимации стрельбы
-        anim.SetTrigger("isShooting");
+        if (currentAmmo > 0) 
+        {
+            // Запуск анимации стрельбы
+            anim.SetTrigger("isShooting");
 
-        // Создание пули
-        AudioManager.instance.PlayEffect("GunShot");
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 direction = (mousePosition - firePoint.position).normalized;
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
-        bulletRb.velocity = direction * bulletSpeed;
+            // Создание пули
+            AudioManager.instance.PlayEffect("GunShot");
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 direction = (mousePosition - firePoint.position).normalized;
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
+            bulletRb.velocity = direction * bulletSpeed;
 
-        // Привязка эффекта столкновения к пуле
-        PlayerBullet bulletScript = bullet.GetComponent<PlayerBullet>();
-        bulletScript.SetImpactEffect(impactEffectPrefab);
+            // Привязка эффекта столкновения к пуле
+            PlayerBullet bulletScript = bullet.GetComponent<PlayerBullet>();
+            bulletScript.SetImpactEffect(impactEffectPrefab);
+            currentAmmo--;
+            bulletScale.SetBullet((float)currentAmmo/maxAmmo);
+        }
+
+    }
+    public void Reload(int ammoAmount)
+    {
+        currentAmmo = Mathf.Min(currentAmmo + ammoAmount, maxAmmo);
+        bulletScale.SetBullet((float)currentAmmo / maxAmmo);
     }
 
     // Отрисовка круга проверки на землю в редакторе

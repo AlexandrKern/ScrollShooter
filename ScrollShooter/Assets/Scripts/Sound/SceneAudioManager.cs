@@ -12,6 +12,9 @@ public class SceneAudioManager : MonoBehaviour
     public AudioClip enemyDeath;
     public AudioClip enemyBulletExplosion;
     public AudioClip enemyLaserShot;
+    public AudioClip playerJump;
+    public AudioClip somersault;
+
 
     void Start()
     {
@@ -24,6 +27,8 @@ public class SceneAudioManager : MonoBehaviour
         AudioManager.instance.AddEffectClip("EnemyDeath", enemyDeath);
         AudioManager.instance.AddEffectClip("EnemyBulletExplosion", enemyBulletExplosion);
         AudioManager.instance.AddEffectClip("EnemyLaserShot", enemyLaserShot);
+        AudioManager.instance.AddEffectClip("PlayerJump", playerJump);
+        AudioManager.instance.AddEffectClip("Somersault", somersault);
 
         // Воспроизведение фоновой музыки
         AudioManager.instance.PlayMusic("BackgroundMusic");

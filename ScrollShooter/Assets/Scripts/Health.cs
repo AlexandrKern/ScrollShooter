@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Health : MonoBehaviour
     private Animator animator;
     public bool isDeath;
     private bool isPlayAudio;
+    public HealthBar healthBar;
 
     void Start()
     {
@@ -16,12 +18,20 @@ public class Health : MonoBehaviour
         isDeath = false;
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
+        if(healthBar != null)
+        {
+            healthBar.SetHealth(1f);
+        }
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         animator.SetTrigger("damage");
+        if (gameObject.CompareTag("Player"))
+        {
+            healthBar.SetHealth((float)currentHealth / maxHealth);
+        }
         if (currentHealth <= 0)
         {
             Die();
@@ -39,7 +49,8 @@ public class Health : MonoBehaviour
         }
         if (gameObject.CompareTag("Enemy")&&!isPlayAudio)
         {
-            isPlayAudio = true;
+            gameObject.GetComponent<CapsuleCollider2D>().isTrigger = true;
+            gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
             AudioManager.instance.PlayEffect("EnemyDeath");
         }
         StartCoroutine(DeathTime());

@@ -2813,6 +2813,8 @@ MonoBehaviour:
   enemyDeath: {fileID: 8300000, guid: 41078687632876f47a2e64a0d0fb2c0b, type: 3}
   enemyBulletExplosion: {fileID: 8300000, guid: 6e9d7a9caa1464d419822ada4df318c3, type: 3}
   enemyLaserShot: {fileID: 8300000, guid: 3e4c4a3bd77e1544db8a93c8ad853e73, type: 3}
+  playerJump: {fileID: 8300000, guid: fc5bba8171cf81d4098f0784e08f0fb0, type: 3}
+  somersault: {fileID: 8300000, guid: 62df4d0cc4417db41bb206192b30e969, type: 3}
 --- !u!4 &1491823802
 Transform:
   m_ObjectHideFlags: 0
