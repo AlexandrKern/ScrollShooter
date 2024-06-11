@@ -11,6 +11,8 @@ public class Health : MonoBehaviour
     public bool isDeath;
     private bool isPlayAudio;
     public HealthBar healthBar;
+    public int points = 10; // Количество очков, которые дает враг при уничтожении
+    private PlayerScore playerScore;
 
     void Start()
     {
@@ -21,6 +23,12 @@ public class Health : MonoBehaviour
         if(healthBar != null)
         {
             healthBar.SetHealth(1f);
+        }
+        // Предполагаем, что объект игрока имеет тег "Player"
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            playerScore = player.GetComponent<PlayerScore>();
         }
     }
 
@@ -44,11 +52,19 @@ public class Health : MonoBehaviour
         isDeath = true;
         if (gameObject.CompareTag("Player")&&!isPlayAudio)
         {
+            SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+            spriteRenderer.enabled = false;
             isPlayAudio = true;
             AudioManager.instance.PlayEffect("PlayerDeath");
         }
         if (gameObject.CompareTag("Enemy")&&!isPlayAudio)
         {
+            if (playerScore != null)
+            {
+                playerScore.AddScore(points);
+            }
+            SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+            spriteRenderer.enabled = false;
             gameObject.GetComponent<CapsuleCollider2D>().isTrigger = true;
             gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
             AudioManager.instance.PlayEffect("EnemyDeath");
@@ -58,11 +74,22 @@ public class Health : MonoBehaviour
 
     private IEnumerator DeathTime()
     {
-        yield return new WaitForSeconds(5);
+       
+        yield return new WaitForSeconds(3);
         Destroy(gameObject);
         if (gameObject.CompareTag("Player"))
         {
             SceneManager.LoadScene(2);
         }
+    }
+
+    public void PlayerHealth(int health)
+    {
+        currentHealth += health;
+        if (currentHealth > 100)
+        {
+            currentHealth = 100;
+        }
+        healthBar.SetHealth((float)currentHealth / maxHealth);
     }
 }

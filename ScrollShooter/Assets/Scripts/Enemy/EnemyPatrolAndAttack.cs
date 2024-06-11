@@ -79,19 +79,11 @@ public class EnemyPatrolAndAttack : EnemyBase
         }
       
     }
-
-    private IEnumerator DeathTime()
-    {
-        yield return new WaitForSeconds(2);
-        Instantiate(deathEffectPrefab, transform.position,Quaternion.identity);
-
-    }
-
     protected override void Death()
     {
         if (health.isDeath)
         {
-            StartCoroutine(DeathTime());
+            Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
         }
     }
 }

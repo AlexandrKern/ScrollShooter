@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     // Параметры состояния
     private bool isRolling;
     private float rollTime;
+    private bool localIsDeath;
 
     // Параметры стрельбы
     [Header("Shooting Settings")]
@@ -49,6 +50,7 @@ public class PlayerController : MonoBehaviour
         health = GetComponent<Health>();
         currentAmmo = maxAmmo;
         bulletScale.SetBullet(1f);
+        localIsDeath = false;
     }
 
     void Update()
@@ -169,18 +171,12 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
 
-    private IEnumerator DeathTime()
-    {
-        yield return new WaitForSeconds(0.3f);
-        Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
-
-    }
-
     private void Death()
     {
-        if (health.isDeath)
+        if (health.isDeath && !localIsDeath)
         {
-            StartCoroutine(DeathTime());
+            Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
+            localIsDeath = true;
         }
     }
 }
