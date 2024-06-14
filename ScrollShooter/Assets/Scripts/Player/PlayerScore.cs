@@ -12,7 +12,8 @@ public class PlayerScore : MonoBehaviour
     public Color highlightColor = Color.yellow;
     public float normalFontSize = 14f;
     public float enlargedFontSize = 20f;
-    public float animationDuration = 0.5f;
+    public float animationDuration = 0.5f; // Длительность анимации для моргания
+    public float scoreUpdateInterval = 0.01f; // Интервал обновления очков
 
     private int displayedScore = 0;
     private Coroutine scoreCoroutine;
@@ -26,11 +27,26 @@ public class PlayerScore : MonoBehaviour
     public void AddScore(int points)
     {
         score += points;
-        if (scoreCoroutine != null)
+        if (scoreCoroutine == null)
         {
-            StopCoroutine(scoreCoroutine);
+            scoreCoroutine = StartCoroutine(UpdateScore());
         }
-        scoreCoroutine = StartCoroutine(AnimateScore());
+    }
+
+    private IEnumerator UpdateScore()
+    {
+        while (displayedScore < score)
+        {
+            displayedScore++;
+            UpdateScoreText();
+
+            // Анимация изменения размера и цвета текста
+            StartCoroutine(AnimateScore());
+
+            yield return new WaitForSeconds(scoreUpdateInterval); // скорость начисления очков
+        }
+
+        scoreCoroutine = null; // Остановить корутину после завершения начисления очков
     }
 
     private IEnumerator AnimateScore()
@@ -39,40 +55,31 @@ public class PlayerScore : MonoBehaviour
         float currentFontSize = normalFontSize;
         Color currentColor = normalColor;
 
-        while (displayedScore < score)
+        // Увеличение размера и изменение цвета
+        while (elapsedTime < animationDuration)
         {
-            displayedScore++;
-            UpdateScoreText();
+            float t = elapsedTime / animationDuration;
+            currentFontSize = Mathf.Lerp(normalFontSize, enlargedFontSize, t);
+            currentColor = Color.Lerp(normalColor, highlightColor, t);
+            scoreText.fontSize = (int)currentFontSize;
+            scoreText.color = currentColor;
 
-            // Анимация изменения размера и цвета текста
-            elapsedTime = 0f;
-            while (elapsedTime < animationDuration)
-            {
-                float t = elapsedTime / animationDuration;
-                currentFontSize = Mathf.Lerp(normalFontSize, enlargedFontSize, t);
-                currentColor = Color.Lerp(normalColor, highlightColor, t);
-                scoreText.fontSize = (int)currentFontSize;
-                scoreText.color = currentColor;
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
 
-                elapsedTime += Time.deltaTime;
-                yield return null;
-            }
+        // Возвращение к нормальному размеру и цвету
+        elapsedTime = 0f;
+        while (elapsedTime < animationDuration)
+        {
+            float t = elapsedTime / animationDuration;
+            currentFontSize = Mathf.Lerp(enlargedFontSize, normalFontSize, t);
+            currentColor = Color.Lerp(highlightColor, normalColor, t);
+            scoreText.fontSize = (int)currentFontSize;
+            scoreText.color = currentColor;
 
-            // Вернуть текст к нормальному размеру и цвету
-            elapsedTime = 0f;
-            while (elapsedTime < animationDuration)
-            {
-                float t = elapsedTime / animationDuration;
-                currentFontSize = Mathf.Lerp(enlargedFontSize, normalFontSize, t);
-                currentColor = Color.Lerp(highlightColor, normalColor, t);
-                scoreText.fontSize = (int)currentFontSize;
-                scoreText.color = currentColor;
-
-                elapsedTime += Time.deltaTime;
-                yield return null;
-            }
-
-            yield return new WaitForSeconds(0.01f); // скорость анимации
+            elapsedTime += Time.deltaTime;
+            yield return null;
         }
     }
 

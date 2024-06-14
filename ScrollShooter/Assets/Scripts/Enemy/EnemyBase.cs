@@ -4,49 +4,56 @@ using UnityEngine;
 
 public abstract class EnemyBase : MonoBehaviour
 {
-    public Transform player;
+    public GameObject player;
     public float detectionRange = 5f;
     public float patrolSpeed = 2f;
 
     protected enum State { Patrolling, Attacking }
     protected State currentState = State.Patrolling;
     protected bool isMovingRight = true;
+    private Health playerHealth;
 
+    protected virtual void Start()
+    {
+        if (player == null)
+        {
+            Debug.LogError("Player is not assigned in the Inspector");
+        }
 
+        playerHealth = player.GetComponent<Health>();
+        if (playerHealth == null)
+        {
+            Debug.LogError("Player does not have a Health component");
+        }
+    }
 
     protected virtual void Update()
     {
+        float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
 
-            float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        currentState = distanceToPlayer <= detectionRange ? State.Attacking : State.Patrolling;
 
-            if (distanceToPlayer <= detectionRange)
-            {
-                currentState = State.Attacking;
-            }
-            else
-            {
-                currentState = State.Patrolling;
-            }
-
-            switch (currentState)
-            {
-                case State.Patrolling:
-                    Patrol();
-                    break;
-                case State.Attacking:
+        switch (currentState)
+        {
+            case State.Patrolling:
+                Patrol();
+                break;
+            case State.Attacking:
+                if (playerHealth != null && !playerHealth.isDeath)
+                {
                     Attack();
-                    break;
-            }
-        Death();
+                }
+                break;
+        }
 
+        CheckDeath();
     }
 
     protected abstract void Patrol();
     protected abstract void Attack();
+    protected abstract void CheckDeath();
 
-    protected abstract void Death();
-
-    protected void Flip()
+    protected virtual void Flip()
     {
         isMovingRight = !isMovingRight;
         Vector3 localScale = transform.localScale;

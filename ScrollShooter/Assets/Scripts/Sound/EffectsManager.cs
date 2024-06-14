@@ -6,7 +6,7 @@ using UnityEngine;
 public class EffectsManager : MonoBehaviour, ISoundManager
 {
     public static EffectsManager instance;
-    private float volume = 1.0f;
+    private float volume = 1f;
     private bool isMuted = false;
     private AudioSource audioSource;
     private Dictionary<string, AudioClip> effectClips;

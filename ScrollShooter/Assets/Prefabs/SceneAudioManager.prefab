@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5175381119926910373
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8791484393780252958}
+  - component: {fileID: 4721005870449393875}
+  m_Layer: 0
+  m_Name: SceneAudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8791484393780252958
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5175381119926910373}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2215.0852, y: 1272.5194, z: -36.877987}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4721005870449393875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5175381119926910373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2ac1ad160226e444a8c612a164f8e2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundMusic: {fileID: 8300000, guid: 34dfd38788c14864ba7fd4ad9a6fcf6a, type: 3}
+  buttonClickSound: {fileID: 8300000, guid: 39bb8987ed289f449beb0bfe8ceaaeb4, type: 3}
+  gunshot: {fileID: 8300000, guid: cfd3a3976ac8eb04ca15f761d55d1405, type: 3}
+  explosion: {fileID: 8300000, guid: e82071e9198dbde4bb0bcf5ad537090b, type: 3}
+  playerDeath: {fileID: 8300000, guid: e78621d725622ec459a379881f13426b, type: 3}
+  enemyDeath: {fileID: 8300000, guid: 41078687632876f47a2e64a0d0fb2c0b, type: 3}
+  enemyBulletExplosion: {fileID: 8300000, guid: 6e9d7a9caa1464d419822ada4df318c3, type: 3}
+  enemyLaserShot: {fileID: 8300000, guid: 3e4c4a3bd77e1544db8a93c8ad853e73, type: 3}
+  playerJump: {fileID: 8300000, guid: fc5bba8171cf81d4098f0784e08f0fb0, type: 3}
+  somersault: {fileID: 8300000, guid: 62df4d0cc4417db41bb206192b30e969, type: 3}
+  smoke: {fileID: 8300000, guid: a5f0e2daa73dd52499c5e63df0109c72, type: 3}
+  birdAtackEffect: {fileID: 8300000, guid: 7d4a58b95f444d74f8e106d321b6310b, type: 3}
+  birdDeathEffect: {fileID: 8300000, guid: 8d68e1b13a2c3524ab8bfa4f5705198e, type: 3}

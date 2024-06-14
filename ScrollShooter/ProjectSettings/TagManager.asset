@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Bulit
   - Enemy
+  - EnemyBird
   layers:
   - Default
   - TransparentFX
@@ -50,4 +51,7 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 1202281059
+    locked: 0
+  - name: Crosshair
+    uniqueID: 1710166363
     locked: 0

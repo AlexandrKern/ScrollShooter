@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\FireCannon.cs" />
     <Compile Include="Assets\Scripts\Sound\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Player\HealthPack.cs" />
+    <Compile Include="Assets\Scripts\Enemy\ExplosionDamage.cs" />
     <Compile Include="Assets\Scripts\PauseController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Player\BulletScale.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\CrosshairController.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyBirdPatrol.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyBase.cs" />
     <Compile Include="Assets\Scripts\Sound\EffectsVolumeController.cs" />
     <Compile Include="Assets\Scripts\LevelController.cs" />

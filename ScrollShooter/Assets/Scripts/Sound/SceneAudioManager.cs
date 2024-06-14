@@ -14,6 +14,9 @@ public class SceneAudioManager : MonoBehaviour
     public AudioClip enemyLaserShot;
     public AudioClip playerJump;
     public AudioClip somersault;
+    public AudioClip smoke;
+    public AudioClip birdAtackEffect;
+    public AudioClip birdDeathEffect;
 
 
     void Start()
@@ -29,6 +32,9 @@ public class SceneAudioManager : MonoBehaviour
         AudioManager.instance.AddEffectClip("EnemyLaserShot", enemyLaserShot);
         AudioManager.instance.AddEffectClip("PlayerJump", playerJump);
         AudioManager.instance.AddEffectClip("Somersault", somersault);
+        AudioManager.instance.AddEffectClip("Smoke", smoke);
+        AudioManager.instance.AddEffectClip("BirdEffect", birdAtackEffect);
+        AudioManager.instance.AddEffectClip("BirdDeathEffect", birdDeathEffect);
 
         // Воспроизведение фоновой музыки
         AudioManager.instance.PlayMusic("BackgroundMusic");

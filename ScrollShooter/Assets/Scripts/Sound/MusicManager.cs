@@ -6,7 +6,7 @@ using UnityEngine;
 public class MusicManager : MonoBehaviour, ISoundManager
 {
     public static MusicManager instance;
-    private float volume = 1.0f;
+    private float volume = 1f;
     private bool isMuted = false;
     private AudioSource audioSource;
     private Dictionary<string, AudioClip> musicClips;

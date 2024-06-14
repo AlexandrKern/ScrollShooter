@@ -20,10 +20,12 @@ public class Health : MonoBehaviour
         isDeath = false;
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
-        if(healthBar != null)
+
+        if (healthBar != null)
         {
             healthBar.SetHealth(1f);
         }
+
         // Предполагаем, что объект игрока имеет тег "Player"
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
@@ -36,10 +38,12 @@ public class Health : MonoBehaviour
     {
         currentHealth -= damage;
         animator.SetTrigger("damage");
+
         if (gameObject.CompareTag("Player"))
         {
             healthBar.SetHealth((float)currentHealth / maxHealth);
         }
+
         if (currentHealth <= 0)
         {
             Die();
@@ -50,46 +54,75 @@ public class Health : MonoBehaviour
     {
         animator.SetTrigger("death");
         isDeath = true;
-        if (gameObject.CompareTag("Player")&&!isPlayAudio)
+
+        if (!isPlayAudio)
         {
-            SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-            spriteRenderer.enabled = false;
-            isPlayAudio = true;
-            AudioManager.instance.PlayEffect("PlayerDeath");
-        }
-        if (gameObject.CompareTag("Enemy")&&!isPlayAudio)
-        {
-            if (playerScore != null)
+            if (gameObject.CompareTag("Player"))
             {
-                playerScore.AddScore(points);
+                HandlePlayerDeath();
             }
-            SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-            spriteRenderer.enabled = false;
+            else if (gameObject.CompareTag("Enemy") || gameObject.CompareTag("EnemyBird"))
+            {
+                HandleEnemyDeath();
+            }
+
+            isPlayAudio = true;
+        }
+
+        StartCoroutine(DeathTime());
+    }
+
+    private void HandlePlayerDeath()
+    {
+        SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        spriteRenderer.enabled = false;
+        AudioManager.instance.PlayEffect("PlayerDeath");
+    }
+
+    private void HandleEnemyDeath()
+    {
+        if (playerScore != null)
+        {
+            playerScore.AddScore(points);
+        }
+
+        SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        spriteRenderer.enabled = false;
+
+        if (gameObject.CompareTag("Enemy"))
+        {
+            AudioManager.instance.PlayEffect("EnemyDeath");
             gameObject.GetComponent<CapsuleCollider2D>().isTrigger = true;
             gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
-            AudioManager.instance.PlayEffect("EnemyDeath");
         }
-        StartCoroutine(DeathTime());
+        if (gameObject.CompareTag("EnemyBird"))
+        {
+            AudioManager.instance.PlayEffect("BirdDeathEffect");
+        }
     }
 
     private IEnumerator DeathTime()
     {
-       
-        yield return new WaitForSeconds(3);
-        Destroy(gameObject);
         if (gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(2);
+            yield return new WaitForSeconds(3);
+            SceneManager.LoadScene(2); // Загрузите сцену заново или замените на нужный индекс сцены
+        }
+        else
+        {
+            yield return new WaitForSeconds(0); // Можно заменить на задержку, если нужно
+            Destroy(gameObject);
         }
     }
 
     public void PlayerHealth(int health)
     {
         currentHealth += health;
-        if (currentHealth > 100)
+        if (currentHealth > maxHealth)
         {
-            currentHealth = 100;
+            currentHealth = maxHealth;
         }
+
         healthBar.SetHealth((float)currentHealth / maxHealth);
     }
 }

@@ -1,53 +1,50 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject deathEffectPrefab;
-
-    // Параметры скорости
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
     public float rollSpeed = 8f;
     public float rollDuration = 0.5f;
 
-    // Проверка на земле
     [Header("Ground Check")]
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask whatIsGround;
     private bool isGrounded;
 
-    // Части компонентов
-    private Rigidbody2D rb;
-    private SpriteRenderer sr;
-    private Animator anim;
-
-    // Параметры состояния
-    private bool isRolling;
-    private float rollTime;
-    private bool localIsDeath;
-
-    // Параметры стрельбы
     [Header("Shooting Settings")]
     public GameObject bulletPrefab;
     public Transform firePoint;
     public float bulletSpeed = 10f;
-    public GameObject impactEffectPrefab;// Префаб эффекта столкновения
+    public GameObject impactEffectPrefab;
     public int maxAmmo = 10;
     private int currentAmmo;
     public BulletScale bulletScale;
 
+    public GameObject deathEffectPrefab;
+
+    // Components
+    private Rigidbody2D rb;
+    private SpriteRenderer sr;
+    private Animator anim;
+
+    // State variables
+    private bool isRolling;
+    private float rollTime;
+    private bool localIsDeath;
+
     private Health health;
+
     void Start()
     {
-        // Получение компонентов
+        // Initialize components
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         health = GetComponent<Health>();
+
         currentAmmo = maxAmmo;
         bulletScale.SetBullet(1f);
         localIsDeath = false;
@@ -57,25 +54,25 @@ public class PlayerController : MonoBehaviour
     {
         HandleMovement();
         HandleShooting();
-        Death();
+        CheckDeath();
     }
 
     private void HandleMovement()
     {
         if (!health.isDeath)
         {
-            // Проверка на землю
+            // Ground check
             isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 
-            // Получение ввода
+            // Get input
             float moveInput = Input.GetAxis("Horizontal");
 
             if (!isRolling)
             {
-                // Перемещение персонажа
+                // Move character
                 rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
-                // Поворот спрайта персонажа и оружия в сторону движения
+                // Flip sprite and weapon towards the direction of movement
                 Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 if (mousePosition.x > transform.position.x)
                 {
@@ -90,26 +87,26 @@ public class PlayerController : MonoBehaviour
                     firePoint.localRotation = Quaternion.Euler(0, 180, 0);
                 }
 
-                // Прыжок
+                // Jump
                 if (isGrounded && Input.GetKeyDown(KeyCode.Space))
                 {
                     AudioManager.instance.PlayEffect("PlayerJump");
                     rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 }
 
-                // Начало кувырка
-                if (isGrounded && Input.GetMouseButtonDown(1))
+                // Start rolling
+                if (isGrounded && Input.GetMouseButtonDown(1) && moveInput != 0)
                 {
                     AudioManager.instance.PlayEffect("Somersault");
                     isRolling = true;
                     rollTime = rollDuration;
                     anim.SetBool("isRolling", true);
-                    rb.velocity = new Vector2(moveInput * rollSpeed, rb.velocity.y); // Кувырок в ту сторону, куда нажата кнопка
+                    rb.velocity = new Vector2(moveInput * rollSpeed, rb.velocity.y);
                 }
             }
             else
             {
-                // Обновление времени кувырка
+                // Update roll time
                 rollTime -= Time.deltaTime;
                 if (rollTime <= 0)
                 {
@@ -118,18 +115,16 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            // Обновление параметров анимации
+            // Update animation parameters
             anim.SetBool("isJumping", !isGrounded);
             anim.SetBool("isRunning", moveInput != 0 && isGrounded);
             anim.SetBool("IsEndJumping", isGrounded);
         }
-       
     }
 
     private void HandleShooting()
     {
-        // Стрельба
-        if (Input.GetMouseButtonDown(0) && !PauseController.isPause)
+        if (Input.GetMouseButtonDown(0) && !PauseController.isPause && !health.isDeath)
         {
             Shoot();
         }
@@ -137,12 +132,12 @@ public class PlayerController : MonoBehaviour
 
     private void Shoot()
     {
-        if (currentAmmo > 0) 
+        if (currentAmmo > 0)
         {
-            // Запуск анимации стрельбы
+            // Play shooting animation
             anim.SetTrigger("isShooting");
 
-            // Создание пули
+            // Create bullet
             AudioManager.instance.PlayEffect("GunShot");
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 direction = (mousePosition - firePoint.position).normalized;
@@ -150,33 +145,33 @@ public class PlayerController : MonoBehaviour
             Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
             bulletRb.velocity = direction * bulletSpeed;
 
-            // Привязка эффекта столкновения к пуле
+            // Set impact effect
             PlayerBullet bulletScript = bullet.GetComponent<PlayerBullet>();
             bulletScript.SetImpactEffect(impactEffectPrefab);
             currentAmmo--;
-            bulletScale.SetBullet((float)currentAmmo/maxAmmo);
+            bulletScale.SetBullet((float)currentAmmo / maxAmmo);
         }
-
     }
+
     public void Reload(int ammoAmount)
     {
         currentAmmo = Mathf.Min(currentAmmo + ammoAmount, maxAmmo);
         bulletScale.SetBullet((float)currentAmmo / maxAmmo);
     }
 
-    // Отрисовка круга проверки на землю в редакторе
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
 
-    private void Death()
+    private void CheckDeath()
     {
         if (health.isDeath && !localIsDeath)
         {
             Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
             localIsDeath = true;
+            // Additional death handling logic (e.g., disable player controls) can be added here
         }
     }
 }
