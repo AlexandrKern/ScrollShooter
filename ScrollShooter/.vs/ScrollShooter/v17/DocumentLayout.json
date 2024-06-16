@@ -3,36 +3,8 @@
   "WorkspaceRootPath": "D:\\ScrollShooter\\ScrollShooter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\enemy\\enemybirdpatrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemybirdpatrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\enemy\\enemypatrolandattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemypatrolandattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\sound\\sceneaudiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\sound\\sceneaudiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\enemy\\enemybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\firedamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\firedamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\firecannon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\firecannon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\player\\playerscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\pausecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pausecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,110 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Health.cs",
-              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Health.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Health.cs",
-              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Health.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Health.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAwwGMAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T17:37:39.015Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SceneAudioManager.cs",
-              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Sound\\SceneAudioManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Sound\\SceneAudioManager.cs",
-              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Sound\\SceneAudioManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Sound\\SceneAudioManager.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCQAAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T17:36:00.402Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EnemyPatrolAndAttack.cs",
-              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Enemy\\EnemyPatrolAndAttack.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyPatrolAndAttack.cs",
-              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Enemy\\EnemyPatrolAndAttack.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemyPatrolAndAttack.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAwwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T17:16:24.587Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EnemyBase.cs",
-              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Enemy\\EnemyBase.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyBase.cs",
-              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Enemy\\EnemyBase.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemyBase.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAswDcAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T17:10:38.082Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EnemyBirdPatrol.cs",
-              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Enemy\\EnemyBirdPatrol.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyBirdPatrol.cs",
-              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Enemy\\EnemyBirdPatrol.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemyBirdPatrol.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAwwE8AAAAeAAAA",
+              "Title": "PauseController.cs",
+              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\PauseController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PauseController.cs",
+              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\PauseController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PauseController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T17:09:58.477Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FireDamage.cs",
-              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\FireDamage.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\FireDamage.cs",
-              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\FireDamage.cs",
-              "RelativeToolTip": "Assets\\Scripts\\FireDamage.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T15:56:36.653Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FireCannon.cs",
-              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\FireCannon.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\FireCannon.cs",
-              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\FireCannon.cs",
-              "RelativeToolTip": "Assets\\Scripts\\FireCannon.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T15:56:25.183Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PlayerScore.cs",
-              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Player\\PlayerScore.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerScore.cs",
-              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Player\\PlayerScore.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerScore.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAcwBcAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T15:37:07.887Z",
+              "WhenOpened": "2024-06-16T19:18:28.152Z",
               "EditorCaption": ""
             }
           ]

@@ -49,9 +49,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Player
+    uniqueID: 42286163
+    locked: 0
   - name: Ground
     uniqueID: 1202281059
     locked: 0
   - name: Crosshair
     uniqueID: 1710166363
+    locked: 0
+  - name: UI
+    uniqueID: 917851983
     locked: 0

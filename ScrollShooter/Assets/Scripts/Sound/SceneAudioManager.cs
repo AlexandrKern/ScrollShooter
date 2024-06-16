@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class SceneAudioManager : MonoBehaviour
 {
-    public AudioClip backgroundMusic;
+    public AudioClip gameMusic;
+    public AudioClip gameOverMusic;
+    public AudioClip victoryMusic;
+    public AudioClip startMusic;
     public AudioClip buttonClickSound;
     public AudioClip gunshot;
     public AudioClip explosion;
@@ -17,12 +20,18 @@ public class SceneAudioManager : MonoBehaviour
     public AudioClip smoke;
     public AudioClip birdAtackEffect;
     public AudioClip birdDeathEffect;
-
+    public AudioClip keyEffect;
+    public AudioClip doorEffect;
+    
+   
 
     void Start()
     {
         // Добавление аудиоклипов в менеджеры звуков
-        AudioManager.instance.AddMusicClip("BackgroundMusic", backgroundMusic);
+        AudioManager.instance.AddMusicClip("StartMusic", startMusic);
+        AudioManager.instance.AddMusicClip("GameMusic", gameMusic);
+        AudioManager.instance.AddMusicClip("VictoryMusic", victoryMusic);
+        AudioManager.instance.AddMusicClip("GameOverMusic", gameOverMusic);
         AudioManager.instance.AddEffectClip("ButtonClick", buttonClickSound);
         AudioManager.instance.AddEffectClip("GunShot", gunshot);
         AudioManager.instance.AddEffectClip("Explosion", explosion);
@@ -34,10 +43,12 @@ public class SceneAudioManager : MonoBehaviour
         AudioManager.instance.AddEffectClip("Somersault", somersault);
         AudioManager.instance.AddEffectClip("Smoke", smoke);
         AudioManager.instance.AddEffectClip("BirdEffect", birdAtackEffect);
-        AudioManager.instance.AddEffectClip("BirdDeathEffect", birdDeathEffect);
+        AudioManager.instance.AddEffectClip("DoorEffect", doorEffect);
+        AudioManager.instance.AddEffectClip("KeyEffect", keyEffect);
 
-        // Воспроизведение фоновой музыки
-        AudioManager.instance.PlayMusic("BackgroundMusic");
+        //// Воспроизведение фоновой музыки
+        //AudioManager.instance.PlayMusic("BackgroundMusic");
+        
     }
 
     public void OnButtonClick()

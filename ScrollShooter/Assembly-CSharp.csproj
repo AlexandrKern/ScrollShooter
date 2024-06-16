@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\ParallaxEffect.cs" />
     <Compile Include="Assets\Scripts\FireCannon.cs" />
     <Compile Include="Assets\Scripts\Sound\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\Finish.cs" />
     <Compile Include="Assets\Scripts\Player\HealthPack.cs" />
     <Compile Include="Assets\Scripts\Enemy\ExplosionDamage.cs" />
     <Compile Include="Assets\Scripts\PauseController.cs" />
@@ -74,6 +75,8 @@
     <Compile Include="Assets\Scripts\Player\BulletScale.cs" />
     <Compile Include="Assets\Scripts\ShakingPlatform.cs" />
     <Compile Include="Assets\Scripts\Player\HealthBar.cs" />
+    <Compile Include="Assets\Scripts\Door.cs" />
+    <Compile Include="Assets\Scripts\KeyController.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyBullet.cs" />
     <Compile Include="Assets\Scripts\FireDamage.cs" />
     <Compile Include="Assets\Scripts\Sound\SceneAudioManager.cs" />
@@ -85,6 +88,7 @@
     <Compile Include="Assets\Scripts\Sound\EffectsVolumeController.cs" />
     <Compile Include="Assets\Scripts\LevelController.cs" />
     <Compile Include="Assets\Scripts\Player\AmmoPickup.cs" />
+    <Compile Include="Assets\Scripts\Sound\BackGroundMusic.cs" />
     <Compile Include="Assets\Scripts\Sound\ISoundManager.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyPatrolAndAttack.cs" />
     <Compile Include="Assets\Scripts\Sound\EffectsManager.cs" />

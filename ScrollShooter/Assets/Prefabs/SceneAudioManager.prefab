@@ -44,7 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2ac1ad160226e444a8c612a164f8e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundMusic: {fileID: 8300000, guid: 34dfd38788c14864ba7fd4ad9a6fcf6a, type: 3}
+  gameMusic: {fileID: 8300000, guid: f7134475f54d8904394359b4f9c07532, type: 3}
+  gameOverMusic: {fileID: 8300000, guid: 842cbaadd52808843ad751f71351ab70, type: 3}
+  victoryMusic: {fileID: 8300000, guid: ca8a60b2e400aa84cbcadf358e9cb9f7, type: 3}
+  startMusic: {fileID: 8300000, guid: 279ae89c9ef894844bcfa2d918f6ba1d, type: 3}
   buttonClickSound: {fileID: 8300000, guid: 39bb8987ed289f449beb0bfe8ceaaeb4, type: 3}
   gunshot: {fileID: 8300000, guid: cfd3a3976ac8eb04ca15f761d55d1405, type: 3}
   explosion: {fileID: 8300000, guid: e82071e9198dbde4bb0bcf5ad537090b, type: 3}
@@ -57,3 +60,5 @@ MonoBehaviour:
   smoke: {fileID: 8300000, guid: a5f0e2daa73dd52499c5e63df0109c72, type: 3}
   birdAtackEffect: {fileID: 8300000, guid: 7d4a58b95f444d74f8e106d321b6310b, type: 3}
   birdDeathEffect: {fileID: 8300000, guid: 8d68e1b13a2c3524ab8bfa4f5705198e, type: 3}
+  keyEffect: {fileID: 8300000, guid: 6466f19e5c901034587036c399c4d640, type: 3}
+  doorEffect: {fileID: 8300000, guid: dafacdf4de1ff3740bcd8aeec62143b9, type: 3}
