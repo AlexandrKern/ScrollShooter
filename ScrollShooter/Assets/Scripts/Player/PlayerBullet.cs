@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour
@@ -19,7 +17,6 @@ public class PlayerBullet : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Создание эффекта столкновения
         if (impactEffect != null)
         {
             Instantiate(impactEffect, transform.position, transform.rotation);
@@ -30,7 +27,6 @@ public class PlayerBullet : MonoBehaviour
             playerHealth.TakeDamage(damage);
         }
         AudioManager.instance.PlayEffect("Explosion");
-        // Уничтожение пули
         Destroy(gameObject);
     }
 }

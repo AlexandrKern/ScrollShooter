@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
@@ -11,8 +10,6 @@ public class Health : MonoBehaviour
     public bool isDeath;
     private bool isPlayAudio;
     public HealthBar healthBar;
-    public int points = 10; // Количество очков, которые дает враг при уничтожении
-    private PlayerScore playerScore;
 
     void Start()
     {
@@ -24,13 +21,6 @@ public class Health : MonoBehaviour
         if (healthBar != null)
         {
             healthBar.SetHealth(1f);
-        }
-
-        // Предполагаем, что объект игрока имеет тег "Player"
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null)
-        {
-            playerScore = player.GetComponent<PlayerScore>();
         }
     }
 
@@ -81,10 +71,6 @@ public class Health : MonoBehaviour
 
     private void HandleEnemyDeath()
     {
-        if (playerScore != null)
-        {
-            playerScore.AddScore(points);
-        }
 
         SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         spriteRenderer.enabled = false;
@@ -106,11 +92,11 @@ public class Health : MonoBehaviour
         if (gameObject.CompareTag("Player"))
         {
             yield return new WaitForSeconds(3);
-            SceneManager.LoadScene(2); // Загрузите сцену заново или замените на нужный индекс сцены
+            SceneManager.LoadScene(2);
         }
         else
         {
-            yield return new WaitForSeconds(0); // Можно заменить на задержку, если нужно
+            yield return new WaitForSeconds(0);
             Destroy(gameObject);
         }
     }

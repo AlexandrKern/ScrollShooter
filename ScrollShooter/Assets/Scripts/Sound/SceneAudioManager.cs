@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SceneAudioManager : MonoBehaviour
@@ -27,7 +25,6 @@ public class SceneAudioManager : MonoBehaviour
 
     void Start()
     {
-        // Добавление аудиоклипов в менеджеры звуков
         AudioManager.instance.AddMusicClip("StartMusic", startMusic);
         AudioManager.instance.AddMusicClip("GameMusic", gameMusic);
         AudioManager.instance.AddMusicClip("VictoryMusic", victoryMusic);
@@ -45,10 +42,7 @@ public class SceneAudioManager : MonoBehaviour
         AudioManager.instance.AddEffectClip("BirdEffect", birdAtackEffect);
         AudioManager.instance.AddEffectClip("DoorEffect", doorEffect);
         AudioManager.instance.AddEffectClip("KeyEffect", keyEffect);
-
-        //// Воспроизведение фоновой музыки
-        //AudioManager.instance.PlayMusic("BackgroundMusic");
-        
+        AudioManager.instance.AddEffectClip("BirdDeathEffect", birdDeathEffect);
     }
 
     public void OnButtonClick()

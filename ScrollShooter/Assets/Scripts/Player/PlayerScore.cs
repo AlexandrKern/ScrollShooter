@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerScore : MonoBehaviour
 {
-    public int score = 0;
+    public static int score;
     public Text staticText; // Текст "Очки:"
     public Text scoreText; // Текст с изменяющимися цифрами
     public Color normalColor = Color.white;
@@ -20,6 +20,7 @@ public class PlayerScore : MonoBehaviour
 
     void Start()
     {
+        score = 0;
         UpdateScoreText();
         staticText.text = "S C O R E:"; // Устанавливаем текст для статического элемента
     }
@@ -27,6 +28,8 @@ public class PlayerScore : MonoBehaviour
     public void AddScore(int points)
     {
         score += points;
+        //PlayerPrefs.SetInt("Score", score);
+        //PlayerPrefs.Save();
         if (scoreCoroutine == null)
         {
             scoreCoroutine = StartCoroutine(UpdateScore());

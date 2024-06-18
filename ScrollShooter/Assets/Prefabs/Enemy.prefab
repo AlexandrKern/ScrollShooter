@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7168899589078598506}
   - component: {fileID: 4894871180896658653}
   - component: {fileID: 3257202851717749859}
+  - component: {fileID: 8777538242224606242}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -210,7 +211,19 @@ MonoBehaviour:
   maxHealth: 100
   isDeath: 0
   healthBar: {fileID: 0}
-  points: 100
+--- !u!114 &8777538242224606242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841743844627424938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0dbce9994b3434f957b05842b8a88a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 150
 --- !u!1 &5314473438210415110
 GameObject:
   m_ObjectHideFlags: 0

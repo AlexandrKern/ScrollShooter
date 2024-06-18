@@ -390,7 +390,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 683337967}
         m_TargetAssemblyTypeName: SceneAudioManager, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 1
@@ -535,6 +535,7 @@ GameObject:
   - component: {fileID: 658117504}
   - component: {fileID: 658117503}
   - component: {fileID: 658117507}
+  - component: {fileID: 658117508}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -638,6 +639,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 733abc91e729fd04e98e3305b81fc688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &658117508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658117502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b0851b1b1afb8641ab1616aa080bfc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 1626113014}
 --- !u!1001 &683337966
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -695,6 +709,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 316e81e3b24d30f4783a5f488f77c7fe, type: 3}
+--- !u!114 &683337967 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4721005870449393875, guid: 316e81e3b24d30f4783a5f488f77c7fe, type: 3}
+  m_PrefabInstance: {fileID: 683337966}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2ac1ad160226e444a8c612a164f8e2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &729056738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,7 +1355,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 683337967}
         m_TargetAssemblyTypeName: SceneAudioManager, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 1
@@ -1776,7 +1801,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 683337967}
         m_TargetAssemblyTypeName: SceneAudioManager, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 1
@@ -1933,7 +1958,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 683337967}
         m_TargetAssemblyTypeName: SceneAudioManager, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 1

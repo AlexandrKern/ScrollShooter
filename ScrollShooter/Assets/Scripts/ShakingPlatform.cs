@@ -1,15 +1,15 @@
 using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class ShakingPlatform : MonoBehaviour
 {
-    public float shakeDuration = 1f; // Длительность тряски
-    public float shakeMagnitude = 0.1f; // Сила тряски
-    public float fallDelay = 1f; // Задержка перед падением
-    public float respawnDelay = 5f; // Задержка перед возвращением на исходное место
-    public float fallSpeed = 10f; // Начальная скорость падения
-    public float gravityScale = 5f; // Масштаб гравитации для быстрого падения
+    public float shakeDuration = 1f; 
+    public float shakeMagnitude = 0.1f; 
+    public float fallDelay = 1f; 
+    public float respawnDelay = 5f; 
+    public float fallSpeed = 10f; 
+    public float gravityScale = 5f; 
 
     private Vector3 initialPosition;
     private Rigidbody2D rb;
@@ -24,7 +24,7 @@ public class ShakingPlatform : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        rb.bodyType = RigidbodyType2D.Kinematic; // Начальное состояние кинематическое
+        rb.bodyType = RigidbodyType2D.Kinematic;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -39,7 +39,6 @@ public class ShakingPlatform : MonoBehaviour
     {
         isShaking = true;
 
-        // Трясем платформу
         float elapsed = 0.0f;
         while (elapsed < shakeDuration)
         {
@@ -52,14 +51,12 @@ public class ShakingPlatform : MonoBehaviour
             yield return null;
         }
 
-        // Ждем перед падением
         yield return new WaitForSeconds(fallDelay);
 
-        // Отключаем коллайдер и устанавливаем Rigidbody2D в Dynamic для падения
         col.enabled = false;
         rb.bodyType = RigidbodyType2D.Dynamic;
-        rb.gravityScale = gravityScale; // Устанавливаем увеличенную гравитацию для быстрого падения
-        rb.velocity = new Vector2(0, -fallSpeed); // Устанавливаем начальную скорость падения
+        rb.gravityScale = gravityScale; 
+        rb.velocity = new Vector2(0, -fallSpeed); 
         isFalling = true;
     }
 
@@ -67,7 +64,6 @@ public class ShakingPlatform : MonoBehaviour
     {
         if (isFalling)
         {
-            // Делаем платформу невидимой и неактивной
             spriteRenderer.enabled = false;
             col.enabled = false;
             rb.bodyType = RigidbodyType2D.Kinematic;
@@ -84,7 +80,6 @@ public class ShakingPlatform : MonoBehaviour
     {
         yield return new WaitForSeconds(respawnDelay);
 
-        // Возвращаем платформу на исходное место и делаем её видимой и активной
         transform.localPosition = initialPosition;
         spriteRenderer.enabled = true;
         col.enabled = true;

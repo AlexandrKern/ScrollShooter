@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AmmoPickup : MonoBehaviour
@@ -14,7 +12,7 @@ public class AmmoPickup : MonoBehaviour
             if (playerController != null)
             {
                 playerController.Reload(ammoAmount);
-                Destroy(gameObject); // Удаление объекта пополнения боезапаса
+                Destroy(gameObject);
             }
         }
     }

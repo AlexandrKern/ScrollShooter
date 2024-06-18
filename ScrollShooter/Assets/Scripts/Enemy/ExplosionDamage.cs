@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ExplosionDamage : MonoBehaviour
@@ -15,7 +13,7 @@ public class ExplosionDamage : MonoBehaviour
 
     void Start()
     {
-        Destroy(gameObject, duration); // Удалить объект через duration секунд
+        Destroy(gameObject, duration);
     }
 
     void Update()
@@ -27,7 +25,7 @@ public class ExplosionDamage : MonoBehaviour
             if (timer >= damageInterval)
             {
                 DealDamage(collider);
-                timer = 0f; // Сброс таймера
+                timer = 0f;
             }
         }
     }
@@ -52,8 +50,6 @@ public class ExplosionDamage : MonoBehaviour
 
     void DealDamage(Collider2D collider)
     {
-        // Здесь вы должны добавить логику нанесения урона игроку
-        // Например, если у вашего игрока есть компонент Health, то:
         Health playerHealth = collider.GetComponent<Health>();
         if (playerHealth != null)
         {

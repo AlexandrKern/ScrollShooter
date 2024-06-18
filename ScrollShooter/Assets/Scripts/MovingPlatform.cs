@@ -1,14 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    public float speed = 3f; // Скорость платформы
-    public float horizontalMoveDistance = 5f; // Дистанция горизонтального движения платформы
-    public float verticalMoveDistance = 3f; // Дистанция вертикального движения платформы
-    public bool moveHorizontally = true; // Перемещение по горизонтали
-    public bool moveVertically = false; // Перемещение по вертикали
+    public float speed = 3f;
+    public float horizontalMoveDistance = 5f;
+    public float verticalMoveDistance = 3f;
+    public bool moveHorizontally = true; 
+    public bool moveVertically = false;
 
     private Vector3 startPosition;
     private bool movingPositiveDirection = true;

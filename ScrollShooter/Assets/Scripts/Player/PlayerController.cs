@@ -25,12 +25,10 @@ public class PlayerController : MonoBehaviour
 
     public GameObject deathEffectPrefab;
 
-    // Components
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     private Animator anim;
 
-    // State variables
     private bool isRolling;
     private float rollTime;
     private bool localIsDeath;
@@ -39,7 +37,6 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        // Initialize components
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
@@ -61,18 +58,14 @@ public class PlayerController : MonoBehaviour
     {
         if (!health.isDeath)
         {
-            // Ground check
             isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 
-            // Get input
             float moveInput = Input.GetAxis("Horizontal");
 
             if (!isRolling)
             {
-                // Move character
                 rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
-                // Flip sprite and weapon towards the direction of movement
                 Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 if (mousePosition.x > transform.position.x)
                 {
@@ -87,14 +80,12 @@ public class PlayerController : MonoBehaviour
                     firePoint.localRotation = Quaternion.Euler(0, 180, 0);
                 }
 
-                // Jump
                 if (isGrounded && Input.GetKeyDown(KeyCode.Space))
                 {
                     AudioManager.instance.PlayEffect("PlayerJump");
                     rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 }
 
-                // Start rolling
                 if (isGrounded && Input.GetMouseButtonDown(1) && moveInput != 0)
                 {
                     AudioManager.instance.PlayEffect("Somersault");
@@ -106,7 +97,6 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                // Update roll time
                 rollTime -= Time.deltaTime;
                 if (rollTime <= 0)
                 {
@@ -115,7 +105,6 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            // Update animation parameters
             anim.SetBool("isJumping", !isGrounded);
             anim.SetBool("isRunning", moveInput != 0 && isGrounded);
             anim.SetBool("IsEndJumping", isGrounded);
@@ -134,10 +123,8 @@ public class PlayerController : MonoBehaviour
     {
         if (currentAmmo > 0)
         {
-            // Play shooting animation
             anim.SetTrigger("isShooting");
 
-            // Create bullet
             AudioManager.instance.PlayEffect("GunShot");
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 direction = (mousePosition - firePoint.position).normalized;
@@ -145,7 +132,6 @@ public class PlayerController : MonoBehaviour
             Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
             bulletRb.velocity = direction * bulletSpeed;
 
-            // Set impact effect
             PlayerBullet bulletScript = bullet.GetComponent<PlayerBullet>();
             bulletScript.SetImpactEffect(impactEffectPrefab);
             currentAmmo--;
@@ -171,7 +157,6 @@ public class PlayerController : MonoBehaviour
         {
             Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
             localIsDeath = true;
-            // Additional death handling logic (e.g., disable player controls) can be added here
         }
     }
 }

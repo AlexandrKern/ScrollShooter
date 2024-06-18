@@ -4,15 +4,23 @@ public class PauseController : MonoBehaviour
 {
     public static bool isPause;
     public GameObject pausePanel;
+    public GameObject gamePanel;
+
+    private void Start()
+    {
+        isPause = false;
+    }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)&&!isPause)
+        if (Input.GetKeyDown(KeyCode.Escape) && !isPause)
         {
+            gamePanel.SetActive(false);
             pausePanel.SetActive(true);
             PauseGame();
         }
-        if (Input.GetKeyDown(KeyCode.Escape) && isPause)
+        else if (Input.GetKeyDown(KeyCode.Escape) && isPause)
         {
+            gamePanel.SetActive(true);
             pausePanel.SetActive(false);
             PlayGame();
         }

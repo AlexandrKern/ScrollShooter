@@ -1,5 +1,4 @@
 using Assets.Scripts;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,10 +16,9 @@ public class MusicManager : MonoBehaviour, ISoundManager
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource = gameObject.GetComponent<AudioSource>();
             musicClips = new Dictionary<string, AudioClip>();
 
-            // Load saved volume
             volume = PlayerPrefs.GetFloat("MusicVolume", 1.0f);
             ApplyVolumeToAudioSource();
         }

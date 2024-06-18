@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class EnemyPatrolAndAttack : EnemyBase
 {
@@ -19,7 +16,7 @@ public class EnemyPatrolAndAttack : EnemyBase
 
     private void Start()
     {
-        base.Start(); // Вызов базового метода Start, если он существует
+        base.Start();
         localIsDeath = false;
         health = GetComponent<Health>();
         animator = GetComponent<Animator>();
@@ -96,8 +93,7 @@ public class EnemyPatrolAndAttack : EnemyBase
         {
             Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
             localIsDeath = true;
-            // Вызов метода для уничтожения врага или отключения его активности
-            Destroy(gameObject); // Пример удаления объекта, вы можете использовать другой подход
+            Destroy(gameObject);
         }
     }
 }

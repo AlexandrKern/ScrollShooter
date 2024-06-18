@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyBirdPatrol : EnemyBase
@@ -123,7 +121,7 @@ public class EnemyBirdPatrol : EnemyBase
     {
         movingRight = !movingRight;
         Vector3 theScale = transform.localScale;
-        theScale.x *= -1; // меняем направление движения путем отражения по оси X
+        theScale.x *= -1;    // меняем направление движения путем отражения по оси X
         transform.localScale = theScale;
     }
 }

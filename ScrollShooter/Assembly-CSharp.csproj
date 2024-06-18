@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\Enemy\EnemyBullet.cs" />
     <Compile Include="Assets\Scripts\FireDamage.cs" />
     <Compile Include="Assets\Scripts\Sound\SceneAudioManager.cs" />
+    <Compile Include="Assets\Scripts\DisplayScore.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\CrosshairController.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Assets\Scripts\Sound\ISoundManager.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyPatrolAndAttack.cs" />
     <Compile Include="Assets\Scripts\Sound\EffectsManager.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyPoints.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_SETTINGS.cginc" />
