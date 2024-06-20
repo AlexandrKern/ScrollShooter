@@ -62,3 +62,5 @@ MonoBehaviour:
   birdDeathEffect: {fileID: 8300000, guid: 8d68e1b13a2c3524ab8bfa4f5705198e, type: 3}
   keyEffect: {fileID: 8300000, guid: 6466f19e5c901034587036c399c4d640, type: 3}
   doorEffect: {fileID: 8300000, guid: dafacdf4de1ff3740bcd8aeec62143b9, type: 3}
+  reloadEffect: {fileID: 8300000, guid: e08b911e37b528e4ebf4a7f242e7539b, type: 3}
+  healthEffect: {fileID: 8300000, guid: cb3e6074401b67a47856e103477a8e82, type: 3}

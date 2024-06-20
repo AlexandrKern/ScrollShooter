@@ -20,8 +20,10 @@ public class SceneAudioManager : MonoBehaviour
     public AudioClip birdDeathEffect;
     public AudioClip keyEffect;
     public AudioClip doorEffect;
-    
-   
+    public AudioClip reloadEffect;
+    public AudioClip healthEffect;
+
+
 
     void Start()
     {
@@ -43,6 +45,8 @@ public class SceneAudioManager : MonoBehaviour
         AudioManager.instance.AddEffectClip("DoorEffect", doorEffect);
         AudioManager.instance.AddEffectClip("KeyEffect", keyEffect);
         AudioManager.instance.AddEffectClip("BirdDeathEffect", birdDeathEffect);
+        AudioManager.instance.AddEffectClip("ReloadEffect", reloadEffect);
+        AudioManager.instance.AddEffectClip("HealthEffect", healthEffect);
     }
 
     public void OnButtonClick()

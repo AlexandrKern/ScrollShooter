@@ -9,6 +9,7 @@ TagManager:
   - Bulit
   - Enemy
   - EnemyBird
+  - Score
   layers:
   - Default
   - TransparentFX

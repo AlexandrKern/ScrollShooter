@@ -10,7 +10,7 @@ public class EnemyPoints : MonoBehaviour
     void Start()
     {
         health = GetComponent<Health>();
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        GameObject player = GameObject.FindGameObjectWithTag("Score");
         if (player != null)
         {
             playerScore = player.GetComponent<PlayerScore>();

@@ -48,7 +48,7 @@ public class Door : MonoBehaviour
     }
     private void OpenDoor()
     {
-        if (keyValue == 5)
+        if (keyValue == 6)
         {
             doormessage.text = $"Ðress the ' Å ' key";
             if (Input.GetKeyDown(KeyCode.E))
@@ -61,7 +61,7 @@ public class Door : MonoBehaviour
         }
         else
         {
-            doormessage.text = $"Òhere are not enough keys ' {5 - keyValue} '";
+            doormessage.text = $"Òhere are not enough keys ' {6 - keyValue} '";
         }
     }
     public void SetKey()

@@ -11,6 +11,7 @@ public class AmmoPickup : MonoBehaviour
             PlayerController playerController = other.GetComponent<PlayerController>();
             if (playerController != null)
             {
+                AudioManager.instance.PlayEffect("ReloadEffect");
                 playerController.Reload(ammoAmount);
                 Destroy(gameObject);
             }

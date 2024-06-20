@@ -14,7 +14,7 @@ public class EnemyPatrolAndAttack : EnemyBase
     private Health health;
     private bool localIsDeath;
 
-    private void Start()
+    protected override void Start()
     {
         base.Start();
         localIsDeath = false;

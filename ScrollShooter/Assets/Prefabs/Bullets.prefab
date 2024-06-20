@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71da63fdd9ef2dd41baab8827b03d081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoAmount: 50
+  ammoAmount: 15
 --- !u!58 &5476686846001984507
 CircleCollider2D:
   m_ObjectHideFlags: 0

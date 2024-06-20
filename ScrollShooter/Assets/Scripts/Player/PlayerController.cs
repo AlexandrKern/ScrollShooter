@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,7 +21,6 @@ public class PlayerController : MonoBehaviour
     public Transform firePoint;
     public float bulletSpeed = 10f;
     public GameObject impactEffectPrefab;
-    public int maxAmmo = 10;
     private int currentAmmo;
     public BulletScale bulletScale;
 
@@ -32,6 +33,8 @@ public class PlayerController : MonoBehaviour
     private bool isRolling;
     private float rollTime;
     private bool localIsDeath;
+    private int maxAmmo = 100;
+    private int direction;
 
     private Health health;
 
@@ -88,11 +91,19 @@ public class PlayerController : MonoBehaviour
 
                 if (isGrounded && Input.GetMouseButtonDown(1) && moveInput != 0)
                 {
+                    if (moveInput<0)
+                    {
+                        direction = -1;
+                    }
+                    if (moveInput > 0)
+                    {
+                        direction = 1;
+                    }
                     AudioManager.instance.PlayEffect("Somersault");
                     isRolling = true;
                     rollTime = rollDuration;
                     anim.SetBool("isRolling", true);
-                    rb.velocity = new Vector2(moveInput * rollSpeed, rb.velocity.y);
+                    rb.velocity = new Vector2(direction * rollSpeed, rb.velocity.y);
                 }
             }
             else
@@ -141,7 +152,11 @@ public class PlayerController : MonoBehaviour
 
     public void Reload(int ammoAmount)
     {
-        currentAmmo = Mathf.Min(currentAmmo + ammoAmount, maxAmmo);
+        currentAmmo += ammoAmount;
+        if (currentAmmo > maxAmmo)
+        {
+            currentAmmo = maxAmmo;
+        }
         bulletScale.SetBullet((float)currentAmmo / maxAmmo);
     }
 

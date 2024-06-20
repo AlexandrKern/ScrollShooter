@@ -3,15 +3,12 @@ using UnityEngine;
 public class EnemyBirdPatrol : EnemyBase
 {
     public float speed = 2f;
-    public float patrolDistance = 5f;
     public float chaseDistance = 3f;
     public float acceleration = 2f;
     public int damage = 10;
     public GameObject hitEffectPrefab;
     public GameObject deathEffectPrefab;
 
-    private Vector2 startPosition;
-    private bool movingRight = true;
 
     private bool isBirdAudioEffect;
     private bool playerInRange = false;
@@ -20,10 +17,9 @@ public class EnemyBirdPatrol : EnemyBase
 
     protected override void Start()
     {
-        isBirdAudioEffect = true;  
+        isBirdAudioEffect = true;
         localIsDeath = false;
         health = GetComponent<Health>();
-        startPosition = transform.position;
 
         if (health == null)
         {
@@ -40,12 +36,8 @@ public class EnemyBirdPatrol : EnemyBase
 
             if (playerInRange)
             {
-                
+
                 Attack();
-            }
-            else
-            {
-                Patrol();
             }
         }
         CheckDeath();
@@ -53,24 +45,6 @@ public class EnemyBirdPatrol : EnemyBase
 
     protected override void Patrol()
     {
-        if (movingRight)
-        {
-            transform.Translate(Vector2.right * speed * Time.deltaTime);
-
-            if (Vector2.Distance(startPosition, transform.position) >= patrolDistance)
-            {
-                Flip();
-            }
-        }
-        else
-        {
-            transform.Translate(Vector2.left * speed * Time.deltaTime);
-
-            if (Vector2.Distance(startPosition, transform.position) >= patrolDistance)
-            {
-                Flip();
-            }
-        }
     }
 
     protected override void Attack()
@@ -115,13 +89,5 @@ public class EnemyBirdPatrol : EnemyBase
             localIsDeath = true;
             Destroy(gameObject);
         }
-    }
-
-    protected override void Flip()
-    {
-        movingRight = !movingRight;
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;    // меняем направление движения путем отражения по оси X
-        transform.localScale = theScale;
     }
 }

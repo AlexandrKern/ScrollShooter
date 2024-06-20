@@ -15,25 +15,25 @@ public class PlayerScore : MonoBehaviour
     public float animationDuration = 0.5f; // Длительность анимации для моргания
     public float scoreUpdateInterval = 0.01f; // Интервал обновления очков
 
-    private int displayedScore = 0;
+    private int displayedScore;
     private Coroutine scoreCoroutine;
 
     void Start()
     {
-        score = 0;
+        Debug.Log("ScoreManager Start");
         UpdateScoreText();
         staticText.text = "S C O R E:"; // Устанавливаем текст для статического элемента
     }
 
     public void AddScore(int points)
     {
+        Debug.Log("AddScore called with points: " + points);
         score += points;
-        //PlayerPrefs.SetInt("Score", score);
-        //PlayerPrefs.Save();
         if (scoreCoroutine == null)
         {
             scoreCoroutine = StartCoroutine(UpdateScore());
         }
+        UpdateScoreText();
     }
 
     private IEnumerator UpdateScore()
@@ -41,6 +41,7 @@ public class PlayerScore : MonoBehaviour
         while (displayedScore < score)
         {
             displayedScore++;
+            Debug.Log("Updating score: " + displayedScore);
             UpdateScoreText();
 
             // Анимация изменения размера и цвета текста
@@ -55,17 +56,13 @@ public class PlayerScore : MonoBehaviour
     private IEnumerator AnimateScore()
     {
         float elapsedTime = 0f;
-        float currentFontSize = normalFontSize;
-        Color currentColor = normalColor;
 
         // Увеличение размера и изменение цвета
         while (elapsedTime < animationDuration)
         {
             float t = elapsedTime / animationDuration;
-            currentFontSize = Mathf.Lerp(normalFontSize, enlargedFontSize, t);
-            currentColor = Color.Lerp(normalColor, highlightColor, t);
-            scoreText.fontSize = (int)currentFontSize;
-            scoreText.color = currentColor;
+            scoreText.fontSize = (int)Mathf.Lerp(normalFontSize, enlargedFontSize, t);
+            scoreText.color = Color.Lerp(normalColor, highlightColor, t);
 
             elapsedTime += Time.deltaTime;
             yield return null;
@@ -76,10 +73,8 @@ public class PlayerScore : MonoBehaviour
         while (elapsedTime < animationDuration)
         {
             float t = elapsedTime / animationDuration;
-            currentFontSize = Mathf.Lerp(enlargedFontSize, normalFontSize, t);
-            currentColor = Color.Lerp(highlightColor, normalColor, t);
-            scoreText.fontSize = (int)currentFontSize;
-            scoreText.color = currentColor;
+            scoreText.fontSize = (int)Mathf.Lerp(enlargedFontSize, normalFontSize, t);
+            scoreText.color = Color.Lerp(highlightColor, normalColor, t);
 
             elapsedTime += Time.deltaTime;
             yield return null;
@@ -91,6 +86,11 @@ public class PlayerScore : MonoBehaviour
         if (scoreText != null)
         {
             scoreText.text = displayedScore.ToString();
+            Debug.Log("Score text updated to: " + displayedScore);
+        }
+        else
+        {
+            Debug.LogWarning("Score text is null!");
         }
     }
 }

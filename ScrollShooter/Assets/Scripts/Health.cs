@@ -79,7 +79,7 @@ public class Health : MonoBehaviour
         {
             AudioManager.instance.PlayEffect("EnemyDeath");
             gameObject.GetComponent<CapsuleCollider2D>().isTrigger = true;
-            gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+            //gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
         }
         if (gameObject.CompareTag("EnemyBird"))
         {

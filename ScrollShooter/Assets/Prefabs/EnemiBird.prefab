@@ -123,7 +123,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 200
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -189,10 +189,9 @@ MonoBehaviour:
   detectionRange: 5
   patrolSpeed: 2
   speed: 5
-  patrolDistance: 5
   chaseDistance: 20
   acceleration: 1000
-  damage: 10
+  damage: 5
   hitEffectPrefab: {fileID: 2677964426572655946, guid: 1208c2469a8f8c24f806e54a22a8d052, type: 3}
   deathEffectPrefab: {fileID: 479127337099212121, guid: d4f4f77617624e44e88a710d63ef3209, type: 3}
 --- !u!114 &8604455368887655486

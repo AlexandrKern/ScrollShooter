@@ -11,6 +11,7 @@ public class HealthPack : MonoBehaviour
             Health playerHealth = other.GetComponent<Health>();
             if (playerHealth != null)
             {
+                AudioManager.instance.PlayEffect("HealthEffect");
                 playerHealth.PlayerHealth(healAmount);
                 Destroy(gameObject);
             }

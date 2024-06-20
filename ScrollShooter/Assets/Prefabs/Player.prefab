@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 5963310395086197847}
   - component: {fileID: 4423215988942613683}
   - component: {fileID: 7216249816090679110}
-  - component: {fileID: 6629374476454317809}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -160,7 +159,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 10
@@ -200,7 +199,6 @@ MonoBehaviour:
   firePoint: {fileID: 4083796964061420276}
   bulletSpeed: 60
   impactEffectPrefab: {fileID: 3895843508396419812, guid: fa5f1e59dde57c34cbd3c7b41534935e, type: 3}
-  maxAmmo: 200
   bulletScale: {fileID: 0}
   deathEffectPrefab: {fileID: 3740354596959424290, guid: b7a83c6d1b26f1c46b6463352b0b8e20, type: 3}
 --- !u!114 &7216249816090679110
@@ -218,28 +216,6 @@ MonoBehaviour:
   maxHealth: 100
   isDeath: 0
   healthBar: {fileID: 0}
-  points: 10
---- !u!114 &6629374476454317809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 864166358795480148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfc3c6d9a267ce54980083e635149ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 0
-  staticText: {fileID: 0}
-  scoreText: {fileID: 0}
-  normalColor: {r: 0.9160464, g: 1, b: 0, a: 1}
-  highlightColor: {r: 1, g: 1, b: 1, a: 1}
-  normalFontSize: 80
-  enlargedFontSize: 120
-  animationDuration: 0.2
-  scoreUpdateInterval: 0.01
 --- !u!1 &2918741727690582459
 GameObject:
   m_ObjectHideFlags: 0

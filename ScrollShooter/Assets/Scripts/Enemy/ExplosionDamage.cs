@@ -9,7 +9,7 @@ public class ExplosionDamage : MonoBehaviour
     private float timer;
     private bool playerInRange;
 
-    private Collider2D collider;
+    private Collider2D col;
 
     void Start()
     {
@@ -24,7 +24,7 @@ public class ExplosionDamage : MonoBehaviour
 
             if (timer >= damageInterval)
             {
-                DealDamage(collider);
+                DealDamage(col);
                 timer = 0f;
             }
         }
@@ -34,7 +34,7 @@ public class ExplosionDamage : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            collider = other;
+            col = other;
             playerInRange = true;
         }
     }
@@ -43,7 +43,7 @@ public class ExplosionDamage : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            collider = other;
+            col = other;
             playerInRange = false;
         }
     }
