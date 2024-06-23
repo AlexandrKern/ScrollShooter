@@ -3,16 +3,64 @@
   "WorkspaceRootPath": "D:\\ScrollShooter\\ScrollShooter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\shakingplatform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\shakingplatform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|D:\\ScrollShooter\\ScrollShooter\\assets\\scripts\\quitgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\quitgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\pausecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pausecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\parallaxeffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\parallaxeffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\movingplatform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movingplatform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\levelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\keycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\keycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|D:\\ScrollShooter\\ScrollShooter\\assets\\scripts\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\enemy\\enemybirdpatrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemybirdpatrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\firedamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\firedamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\enemy\\enemypatrolandattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemypatrolandattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\firecannon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\firecannon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\finish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\finish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\displayscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\displayscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\cursorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cursorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|d:\\scrollshooter\\scrollshooter\\assets\\scripts\\crosshaircontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7FF850-B0FA-80D8-C823-88416340D85A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crosshaircontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +75,196 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ShakingPlatform.cs",
+              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\ShakingPlatform.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ShakingPlatform.cs",
+              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\ShakingPlatform.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ShakingPlatform.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T10:51:24.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PauseController.cs",
+              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\PauseController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PauseController.cs",
+              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\PauseController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PauseController.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T10:51:13.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ParallaxEffect.cs",
+              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\ParallaxEffect.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ParallaxEffect.cs",
+              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\ParallaxEffect.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ParallaxEffect.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T10:50:14.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MovingPlatform.cs",
+              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\MovingPlatform.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MovingPlatform.cs",
+              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\MovingPlatform.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MovingPlatform.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T10:50:02.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LevelController.cs",
+              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\LevelController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LevelController.cs",
+              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\LevelController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LevelController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T10:49:48.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "KeyController.cs",
+              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\KeyController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\KeyController.cs",
+              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\KeyController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\KeyController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T10:49:41.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FireDamage.cs",
+              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\FireDamage.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FireDamage.cs",
+              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\FireDamage.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FireDamage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T10:49:18.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FireCannon.cs",
+              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\FireCannon.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FireCannon.cs",
+              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\FireCannon.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FireCannon.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T10:49:00.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Finish.cs",
+              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Finish.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Finish.cs",
+              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Finish.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Finish.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T10:48:40.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Door.cs",
+              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Door.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Door.cs",
+              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Door.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Door.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAmwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T10:48:34.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DisplayScore.cs",
+              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\DisplayScore.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DisplayScore.cs",
+              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\DisplayScore.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DisplayScore.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T10:48:31.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CursorController.cs",
+              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\CursorController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CursorController.cs",
+              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\CursorController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CursorController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T09:36:30.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "QuitGame.cs",
+              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\QuitGame.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\QuitGame.cs",
+              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\QuitGame.cs",
+              "RelativeToolTip": "Assets\\Scripts\\QuitGame.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T14:01:36.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Health.cs",
               "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Health.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Health.cs",
               "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Health.cs",
               "RelativeToolTip": "Assets\\Scripts\\Health.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAwwFAAAABKAAAA",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAmwFkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-20T12:15:02.368Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EnemyBirdPatrol.cs",
-              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Enemy\\EnemyBirdPatrol.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyBirdPatrol.cs",
-              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Enemy\\EnemyBirdPatrol.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemyBirdPatrol.cs",
-              "ViewState": "AQIAAD8AAAAAAAAAAAA0wAAAAAAAAAAA",
+              "DocumentIndex": 14,
+              "Title": "CrosshairController.cs",
+              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\CrosshairController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CrosshairController.cs",
+              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\CrosshairController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CrosshairController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T12:14:44.921Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EnemyPatrolAndAttack.cs",
-              "DocumentMoniker": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Enemy\\EnemyPatrolAndAttack.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyPatrolAndAttack.cs",
-              "ToolTip": "D:\\ScrollShooter\\ScrollShooter\\Assets\\Scripts\\Enemy\\EnemyPatrolAndAttack.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemyPatrolAndAttack.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAowAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T12:13:50.702Z",
+              "WhenOpened": "2024-06-23T10:48:09.107Z",
               "EditorCaption": ""
             }
           ]

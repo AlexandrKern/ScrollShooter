@@ -6,28 +6,27 @@ using UnityEngine.UI;
 public class PlayerScore : MonoBehaviour
 {
     public static int score;
-    public Text staticText; // Текст "Очки:"
-    public Text scoreText; // Текст с изменяющимися цифрами
+    public Text staticText;
+    public Text scoreText;
     public Color normalColor = Color.white;
     public Color highlightColor = Color.yellow;
     public float normalFontSize = 14f;
     public float enlargedFontSize = 20f;
-    public float animationDuration = 0.5f; // Длительность анимации для моргания
-    public float scoreUpdateInterval = 0.01f; // Интервал обновления очков
+    public float animationDuration = 0.5f; 
+    public float scoreUpdateInterval = 0.01f; 
 
     private int displayedScore;
     private Coroutine scoreCoroutine;
 
     void Start()
     {
-        Debug.Log("ScoreManager Start");
         UpdateScoreText();
-        staticText.text = "S C O R E:"; // Устанавливаем текст для статического элемента
+        staticText.text = "S C O R E:";
     }
 
     public void AddScore(int points)
     {
-        Debug.Log("AddScore called with points: " + points);
+
         score += points;
         if (scoreCoroutine == null)
         {
@@ -41,23 +40,21 @@ public class PlayerScore : MonoBehaviour
         while (displayedScore < score)
         {
             displayedScore++;
-            Debug.Log("Updating score: " + displayedScore);
+           
             UpdateScoreText();
 
-            // Анимация изменения размера и цвета текста
             StartCoroutine(AnimateScore());
 
-            yield return new WaitForSeconds(scoreUpdateInterval); // скорость начисления очков
+            yield return new WaitForSeconds(scoreUpdateInterval); 
         }
 
-        scoreCoroutine = null; // Остановить корутину после завершения начисления очков
+        scoreCoroutine = null; 
     }
 
     private IEnumerator AnimateScore()
     {
         float elapsedTime = 0f;
 
-        // Увеличение размера и изменение цвета
         while (elapsedTime < animationDuration)
         {
             float t = elapsedTime / animationDuration;
@@ -68,7 +65,6 @@ public class PlayerScore : MonoBehaviour
             yield return null;
         }
 
-        // Возвращение к нормальному размеру и цвету
         elapsedTime = 0f;
         while (elapsedTime < animationDuration)
         {
@@ -86,11 +82,7 @@ public class PlayerScore : MonoBehaviour
         if (scoreText != null)
         {
             scoreText.text = displayedScore.ToString();
-            Debug.Log("Score text updated to: " + displayedScore);
-        }
-        else
-        {
-            Debug.LogWarning("Score text is null!");
+            
         }
     }
 }

@@ -2,10 +2,8 @@ using UnityEngine;
 
 public class EnemyBirdPatrol : EnemyBase
 {
-    public float speed = 2f;
     public float chaseDistance = 3f;
     public float acceleration = 2f;
-    public int damage = 10;
     public GameObject hitEffectPrefab;
     public GameObject deathEffectPrefab;
 
@@ -55,7 +53,7 @@ public class EnemyBirdPatrol : EnemyBase
             isBirdAudioEffect = false;
         }
         Vector2 direction = (player.transform.position - transform.position).normalized;
-        float currentSpeed = speed + acceleration * Time.deltaTime;
+        float currentSpeed = acceleration * Time.deltaTime;
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, currentSpeed * Time.deltaTime);
 
         transform.localScale = new Vector3(Mathf.Sign(player.transform.position.x - transform.position.x), 1, 1);
@@ -69,12 +67,6 @@ public class EnemyBirdPatrol : EnemyBase
             {
                 AudioManager.instance.PlayEffect("Smoke");
                 Instantiate(hitEffectPrefab, transform.position, Quaternion.identity);
-            }
-
-            Health playerHealth = collision.gameObject.GetComponent<Health>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(damage);
             }
 
             Destroy(gameObject);

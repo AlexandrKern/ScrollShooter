@@ -5,6 +5,7 @@ public class PauseController : MonoBehaviour
     public static bool isPause;
     public GameObject pausePanel;
     public GameObject gamePanel;
+    public CursorController cursorController;
 
     private void Start()
     {
@@ -12,28 +13,40 @@ public class PauseController : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !isPause)
+        if (pausePanel!=null||gamePanel!=null)
         {
-            gamePanel.SetActive(false);
-            pausePanel.SetActive(true);
-            PauseGame();
+            if (Input.GetKeyDown(KeyCode.Escape) && !isPause)
+            {
+                gamePanel.SetActive(false);
+                pausePanel.SetActive(true);
+                PauseGame();
+            }
+            else if (Input.GetKeyDown(KeyCode.Escape) && isPause)
+            {
+                gamePanel.SetActive(true);
+                pausePanel.SetActive(false);
+                PlayGame();
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.Escape) && isPause)
-        {
-            gamePanel.SetActive(true);
-            pausePanel.SetActive(false);
-            PlayGame();
-        }
+      
     }
     public void PlayGame()
     {
         Time.timeScale = 1;
         isPause = false;
+        if (cursorController!=null)
+        {
+            cursorController.SwitchingCursor(isPause);
+        }
     }
 
     public void PauseGame()
     {
         Time.timeScale = 0;
         isPause = true;
+        if (cursorController != null)
+        {
+            cursorController.SwitchingCursor(isPause);
+        }
     }
 }

@@ -24,7 +24,10 @@ public class PlayerBullet : MonoBehaviour
         Health playerHealth = collision.gameObject.GetComponent<Health>();
         if (playerHealth != null && !collision.gameObject.CompareTag("Player"))
         {
-            playerHealth.TakeDamage(damage);
+            if (!playerHealth.isDeath)
+            {
+                playerHealth.TakeDamage(damage);
+            }
         }
         AudioManager.instance.PlayEffect("Explosion");
         Destroy(gameObject);

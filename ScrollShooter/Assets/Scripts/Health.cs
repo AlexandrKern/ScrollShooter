@@ -27,8 +27,10 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        animator.SetTrigger("damage");
-
+        if (gameObject.CompareTag("Player")|| gameObject.CompareTag("Enemy"))
+        {
+            animator.SetTrigger("damage");
+        }
         if (gameObject.CompareTag("Player"))
         {
             healthBar.SetHealth((float)currentHealth / maxHealth);
@@ -42,7 +44,11 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
-        animator.SetTrigger("death");
+        if (gameObject.CompareTag("Player") || gameObject.CompareTag("Enemy"))
+        {
+            animator.SetTrigger("death");
+        }
+        
         isDeath = true;
 
         if (!isPlayAudio)
@@ -79,7 +85,6 @@ public class Health : MonoBehaviour
         {
             AudioManager.instance.PlayEffect("EnemyDeath");
             gameObject.GetComponent<CapsuleCollider2D>().isTrigger = true;
-            //gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
         }
         if (gameObject.CompareTag("EnemyBird"))
         {

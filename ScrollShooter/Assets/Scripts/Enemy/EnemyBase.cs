@@ -19,6 +19,7 @@ public abstract class EnemyBase : MonoBehaviour
         }
 
         playerHealth = player.GetComponent<Health>();
+
         if (playerHealth == null)
         {
             Debug.LogError("Player does not have a Health component");

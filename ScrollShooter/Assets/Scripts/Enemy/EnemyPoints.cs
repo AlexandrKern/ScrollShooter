@@ -13,15 +13,17 @@ public class EnemyPoints : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Score");
         if (player != null)
         {
+            
             playerScore = player.GetComponent<PlayerScore>();
         }
     }
 
-    void Update()
+    private void OnDestroy()
     {
         if (health.isDeath)
         {
             playerScore.AddScore(points);
         }
     }
+
 }

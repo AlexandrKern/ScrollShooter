@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Sound\MusicVolumeController.cs" />
+    <Compile Include="Assets\Scripts\QuitGame.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerBullet.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerScore.cs" />
     <Compile Include="Assets\Scripts\Sound\MusicManager.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Assets\Scripts\Sound\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Finish.cs" />
     <Compile Include="Assets\Scripts\Player\HealthPack.cs" />
+    <Compile Include="Assets\Scripts\CursorController.cs" />
     <Compile Include="Assets\Scripts\Enemy\ExplosionDamage.cs" />
     <Compile Include="Assets\Scripts\PauseController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
